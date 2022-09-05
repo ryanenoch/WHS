@@ -20,7 +20,7 @@ def download_file():
 
 app.layout = html.Div(
     [
-        html.H1(children='Working Hour Calculator MX',
+        html.H1(children='Working Hour Scheduler',
                 style={
                     'color': 'black',
                     'textAlign': 'center',
