@@ -4,10 +4,7 @@ from wh import workhours
 from datetime import datetime
 from flask import send_file
 from icsmodule import ics
-
-#import pandas as pd
-
-#df = pd.DataFrame()
+import os
 
 app = Dash(__name__)
 
@@ -153,7 +150,7 @@ def dl_button(dvalue, tvalue1, tvalue2, n_clicks):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
 #app.run_server(host='0.0.0.0', port=8081, debug=False)
 
 #debug=False just to allow time input in Dash HTML app
