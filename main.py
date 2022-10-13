@@ -152,8 +152,8 @@ def dl_button(dvalue, tvalue1, tvalue2, n_clicks):
     return DL
 
 
-#if __name__ == '__main__':
-#    app.run_server(debug=True)
-app.run_server(host='0.0.0.0', port=8081, debug=False)
+if __name__ == '__main__':
+    app.run_server(debug=True)
+#app.run_server(host='0.0.0.0', port=8081, debug=False)
 
 #debug=False just to allow time input in Dash HTML app
