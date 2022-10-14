@@ -8,6 +8,7 @@ import os
 
 app = Dash(__name__)
 
+server = app.server
 
 #Server route to allow file downloads
 @app.server.route('/download_file/')
