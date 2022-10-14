@@ -4,10 +4,7 @@ from wh import workhours
 from datetime import datetime
 from flask import send_file
 from icsmodule import ics
-
-#import pandas as pd
-
-#df = pd.DataFrame()
+import os
 
 app = Dash(__name__)
 
