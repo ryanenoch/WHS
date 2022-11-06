@@ -75,15 +75,19 @@ app.layout = html.Div(
             style_table={
                 'padding-left': '0%',
                 'padding-right': '0%',
-                #'marginLeft': '5%',
-                'margin': 'auto',  #to keep table center aligned
-                'width': '70%'
+                'marginLeft': 'auto',
+                'marginRight': 'auto',
+                #'margin': 'auto',  #to keep table center aligned
+                'width': '99%'
             },
             style_header={
+                'padding-left': '20 px',
+                'padding-right': '20 px',
                 #'backgroundColor': 'white',
-                'backgroundColor': 'rgb(0,0,0)',
-                #'fontWeight': 'bold',
-                'color': 'white'
+                'backgroundColor': 'rgb(0,0,0)',  #table header BG color
+                'fontWeight': 'bold',
+                'color': 'white',
+                'whiteSpace': 'normal'  #wordwrap for headers
             }),
 
         #html.Button('Add Row', id='editing-rows-button', n_clicks=0),
