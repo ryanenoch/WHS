@@ -74,9 +74,10 @@ app.layout = html.Div(
             style_table={
                 'padding-left': '0%',
                 'padding-right': '0%',
-                #'marginLeft': '5%',
-                'margin': 'auto',  #to keep table center aligned
-                'width': '70%'
+                'marginLeft': 'auto',
+                'marginRight': 'auto',
+                #'margin': 'auto',  #to keep table center aligned
+                'width': '99%'
             },
             style_header={
                 #'backgroundColor': 'white',
