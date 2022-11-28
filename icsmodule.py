@@ -22,7 +22,7 @@ def ics(rowlist):
     cal = Calendar()
 
     # Some properties are required to be compliant
-    cal.add('prodid', '-//RE//python ics module v0.1//EN/')
+    cal.add('prodid', '-//RE//python ics module v0.2//EN/')
     cal.add('version', '2.0')
 
     for i in range(0, len(rowlist)):
@@ -44,6 +44,7 @@ def ics(rowlist):
         event.add('description', edesc)
         event.add('dtstart', datetime(yr, mth, day, h1, m1))
         event.add('dtend', datetime(yr, mth, day, h2, m2))
+        event.add('dtstamp', datetime.now(tz=pytz.timezone('US/Eastern')))  #Timestamp based on current time
 
         # Add the organizer
         #organizer = vCalAddress('MAILTO:jdoe@example.com')
