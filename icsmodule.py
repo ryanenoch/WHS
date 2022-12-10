@@ -1,6 +1,6 @@
 def ics(rowlist):
     # imports
-    from icalendar import Calendar, Event, vCalAddress, vText
+    from icalendar import Calendar, Event, vCalAddress, vText, Alarm
     from datetime import datetime
     from dateutil.tz import tzlocal
     from pathlib import Path
