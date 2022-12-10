@@ -45,20 +45,22 @@ def ics(rowlist):
         event.add('dtstart', datetime(yr, mth, day, h1, m1))
         event.add('dtend', datetime(yr, mth, day, h2, m2))
         event.add('dtstamp', datetime.now(tz=pytz.timezone('US/Eastern')))  #Timestamp based on current time
-
-        # Add the organizer
-        #organizer = vCalAddress('MAILTO:jdoe@example.com')
-
-        # Add parameters of the event
-        #organizer.params['name'] = vText('John Doe')
-        #organizer.params['role'] = vText('CEO')
-        #event['organizer'] = organizer
-        #event['location'] = vText('Toronto, Canada')
-
         event['uid'] = datetime.now()  #just to give unique id for each event
 
         # Add the event to the calendar
         cal.add_component(event)
+        
+        ################################################
+        #Add alarm
+        alarm = Alarm()
+        alarm.add('action', 'DISPLAY')
+
+        alert_time = timedelta(
+            hours=-3)  #ring alarm 3 hrs before event start time
+        #alert_time = timedelta(minutes=-5)  #ring alarm 5 min before event start time
+        alarm.add('trigger', alert_time)
+        event.add_component(alarm)
+        ################################################
 
     # Write to disk
     directory = Path.cwd() / 'MyCalendar'
