@@ -45,3 +45,16 @@ And Voila!!! The shift timings are now on your device
 
 ![Screenshot_20230101-203329](https://user-images.githubusercontent.com/105472843/210191804-18b88796-98c2-41a2-9fb9-ba1c0c566971.png)
 
+## How the paid hours are calculated?
+
+For this web app, the following rules are followed to calculate actual paid hours
+
+| Scheduled Shift Length                                     | Paid Breaks   | Unpaid Breaks          |
+|------------------------------------------------------------|---------------|------------------------|
+| 4 hours or less (i.e. 12-4, 5-9)                           | None          | None                   |
+| 4 hours, less than 5 hours (i.e. 9-1:30, 5-9:15)           | One 15 minute | None                   |
+| 5 hours, upto and incl. 7 hours (i.e. 12-5, 9-4, 8-2)      | One 15 minute | One half-hour (30 min) |
+| More than 7 hours, less than 9 hours (i.e. 9-5, 10-5, 1-9) | One 15 minute | One 1 hour             |
+| 9 hours or more (i.e. 8-5, 12-9, 7-4)                      | Two 15 minute | One 1 hour             |
+
+**Note:** Not all companies will necessarily follow this rule
