@@ -18,16 +18,11 @@ def download_file():
 
 app.layout = html.Div(
     [
-        html.H1(children='Working Hour Scheduler',
-                style={
-                    'color': 'black',
-                    'textAlign': 'center',
-                    'background-color': 'transparent'
-                }),
+        html.H1(children='Working Hour Scheduler'),
         html.Div(children=[
-            dcc.Input(id="dateinput", type="date"),
-            dcc.Input(id="timeinput", type="time", step=0),
-            dcc.Input(id="timeinput2", type="time", step=0),
+            dcc.Input(id="dateinput", type="date", placeholder='Date'),
+            dcc.Input(id="timeinput", type="time", step=0, placeholder='Start Time'),
+            dcc.Input(id="timeinput2", type="time", step=0, placeholder='End Time'),
             html.Button('Add to schedule', id='add_to_schedule', n_clicks=0)
         ],
                  style={
