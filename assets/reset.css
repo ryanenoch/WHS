@@ -1,9 +1,73 @@
 body {
 background-color:white ;
 }
+
+h1 {
+  color: black;
+  text-align: center;
+  background-color: transparent;
+}
+
 input {
     background-color: white;
+    color:black;
+
 }
+
+/*CSS placeholder settings*/
+input[type="date"] {
+  position: relative;
+  
+}
+
+input[type="date"]:before {
+  content: attr(placeholder);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+  /*line-height: 1.5;*/
+  padding: 0 0.5rem;
+  //padding: 23px
+}
+
+input[type="date"]:focus:before,
+input[type="date"]:not([value=""]):before
+{
+  display: none;
+}
+
+input[type="time"] {
+  position: relative;
+  text-align: center;
+}
+
+input[type="time"]:before {
+  content: attr(placeholder);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+  /*line-height: 1.5;*/
+  padding: 0 0.5rem;
+}
+
+input[type="time"]:focus:before,
+input[type="time"]:not([value=""]):before
+{
+  display: none;
+}
+
+
 button {
   background-color: black;
   color: white;
