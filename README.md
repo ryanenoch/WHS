@@ -4,6 +4,8 @@ This is a Python Dash web app that allows users who work in retail/fast food sec
 ## How to Use
 On opening the web app, a page will appear showing three input forms.
 
+Note: The instructions below feature screenshots of the web app on an Android device using Brave Browser. The web app might look different depending on the type of device and web browser
+
 1. Tap/Click the first input form
 
 ![Screenshot_20230111-204735](https://user-images.githubusercontent.com/105472843/211965758-3c85c5f0-b79a-462e-902e-f3fe1bddde33.png)
