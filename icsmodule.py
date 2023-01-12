@@ -26,7 +26,7 @@ def ics(rowlist):
     cal.add('version', '2.0')
 
     for i in range(0, len(rowlist)):
-        ename = f"GT {rowlist[i]['start_time']} to {rowlist[i]['end_time']}"
+        ename = f"Work {rowlist[i]['start_time']} to {rowlist[i]['end_time']}"
         esumm = ename
         edesc = ''
         yr, mth, day = rowlist[i]['date'].split('-')
